@@ -2,3 +2,7 @@
     background-color: #fafafa;
     height: 100%;
 }
+
+.error{
+    color: red !important;
+}

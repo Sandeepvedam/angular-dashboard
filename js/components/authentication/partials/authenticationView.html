@@ -1,11 +1,11 @@
 <div>
 
     <md-toolbar md-scroll-shrink>
-        <div class="md-toolbar-tools">Hospital Inventory Dashboard</div>
+        <div class="md-toolbar-tools" style="font-size: x-large">Hospital Inventory Dashboard</div>
     </md-toolbar>
 
     <div>
-        <h2 style="margin-top: 80px;color: #3f51b5" align="center" >Welcome to Hospital Inventory App.</h2>
+        <h2 style="margin-top: 80px;color: #3f51b5;font-size: xx-large" align="center" >Welcome to Hospital Inventory App</h2>
     </div>
 
     <br/>
@@ -15,25 +15,28 @@
         <md-card style="width:60%">
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline" style="color:#9E9E9E">Login</span>
+                    <span class="md-headline" style="color:#9E9E9E;font-size: xx-large">Login</span>
                 </md-card-title-text>
             </md-card-title>
             <md-card-content>
-                <form name="userForm">
+                <form name="loginForm">
                     <md-input-container class="md-block">
                         <label>Username</label>
-                        <input ng-model="loginCredentials.username">
+                        <input type="text" name="username" id="username" ng-model="loginCredentials.username" required>
+                        <p class="error" ng-show="isLoginFieldsWrong && loginForm.username.$error.required" style="text-align: left !important;margin-top: 5px !important;">Username is Required!</p>
                     </md-input-container>
                     <md-input-container class="md-block">
                         <label>Password</label>
-                        <input ng-model="loginCredentials.password">
+                        <input name="password" id="password" type="password" ng-model="loginCredentials.password" required>
+                        <p class="error" ng-show="isLoginFieldsWrong && loginForm.username.$error.required" style="text-align: left !important;margin-top: 5px !important;">Password is Required!</p>
                     </md-input-container>
+                    <p class="error" style="text-align: left !important;">{{wrongCredentials}}</p>
                 </form>
             </md-card-content>
         </md-card>
             </center>
         <center>
-            <md-button class="md-raised md-primary" style="width:20%" ng-click="doLogin(userForm);">Login</md-button><br/>
+            <md-button class="md-raised md-primary" style="width:20%" ng-click="doLogin(loginForm);">Login</md-button><br/>
             <span style="color:lightgrey">OR</span><br/>
             <md-button class="md-raised md-primary" style="width:20%" ng-click="guestLogin();">Login As Guest</md-button>
         </center>

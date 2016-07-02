@@ -1,0 +1,56 @@
+<div>
+
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>
+                <span>Hospital Inventory Dashboard</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-raised" aria-label="Learn More" ng-click="logout('StoreKeeper');">
+                Logout
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <div>
+        <h2 style="margin-top: 80px;color: #3f51b5" align="center" >Store Keeper Page</h2>
+    </div>
+
+    <br/>
+
+    <md-content class="md-padding backgroundTheme">
+
+        <center>
+
+            <md-button class="md-raised md-primary" aria-label="Use Android" ng-click="addProducts($event);">
+               Add Products
+            </md-button>
+        </center>
+
+        <div layout="row" layout-align="center" data-ng-style="{'width': '100%'}">
+                <div class='md-padding' layout="row" layout-align="center" layout-wrap>
+                    <md-card class="md-whiteframe-9dp" data-ng-style="{'width': '350px', 'border-radius': '6px'}" data-ng-repeat="product in products" layout-padding>
+                        <md-card-content>
+                            <div>
+                                <md-button ng-if="product.isApproved===true" ng-disabled="true" class="md-raised md-primary">Approved</md-button>
+                                <md-button ng-if="product.isApproved!==true" class="md-raised md-warn">Waiting For Approval</md-button>
+                                <h4>{{product.productName}}</h4>
+                                <p>{{product.productPrice}}rs</p>
+                                <md-divider ng-style="{'background': 'rgba(255, 102, 51, 0.7)'}"></md-divider>
+                                <br />
+                                <center>
+                                    <img ng-src="{{product.productImage}}" style="width:50% !important;height:50% !important" class="md-card-image" alt="Washed Out">
+                                </center>
+                            </div>
+                        </md-card-content>
+                        <md-card-footer>
+                            <div class="md-actions" layout="row" layout-align="center end">
+                                <md-button ng-click="showProductDescription(product)">View</md-button>
+                            </div>
+                        </md-card-footer>
+                    </md-card>
+                </div>
+            </div>
+    </md-content>
+
+</div>

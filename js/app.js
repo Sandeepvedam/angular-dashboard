@@ -12,5 +12,17 @@ app.config(function ($routeProvider) {
             controller:'GuestController',
             templateUrl : 'js/components/guest/partials/guestView.html'
         })
+        .when('/adminPage',{
+            controller:'AdminController',
+            templateUrl : 'js/components/admin/partials/adminView.html'
+        })
+        .when('/managerPage',{
+            controller:'ManagerController',
+            templateUrl : 'js/components/manager/partials/managerView.html'
+        })
+        .when('/storeKeeperPage',{
+            controller:'StoreKeeperController',
+            templateUrl : 'js/components/storeKeeper/partials/storeKeeperView.html'
+        })
         .otherwise({ redirectTo: '/login' });
 });
