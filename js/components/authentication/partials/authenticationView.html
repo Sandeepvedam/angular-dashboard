@@ -1,0 +1,41 @@
+<div>
+
+    <md-toolbar md-scroll-shrink>
+        <div class="md-toolbar-tools">Hospital Inventory Dashboard</div>
+    </md-toolbar>
+
+    <div>
+        <h2 style="margin-top: 80px;color: #3f51b5" align="center" >Welcome to Hospital Inventory App.</h2>
+    </div>
+
+    <br/>
+
+    <md-content class="md-padding backgroundTheme">
+        <center>
+        <md-card style="width:60%">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline" style="color:#9E9E9E">Login</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <form name="userForm">
+                    <md-input-container class="md-block">
+                        <label>Username</label>
+                        <input ng-model="loginCredentials.username">
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>Password</label>
+                        <input ng-model="loginCredentials.password">
+                    </md-input-container>
+                </form>
+            </md-card-content>
+        </md-card>
+            </center>
+        <center>
+            <md-button class="md-raised md-primary" style="width:20%" ng-click="doLogin(userForm);">Login</md-button><br/>
+            <span style="color:lightgrey">OR</span><br/>
+            <md-button class="md-raised md-primary" style="width:20%" ng-click="guestLogin();">Login As Guest</md-button>
+        </center>
+    </md-content>
+</div>

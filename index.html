@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="hospitalInventoryDemoApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Hospital Inventory Demo App</title>
+
+    <!--Google Fonts and Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Begin vendor CSS files -->
+    <link type="text/css" href="vendors/angular-material/angular-material.css" rel="stylesheet">
+    <!-- End vendor CSS files -->
+
+    <!-- Custom styles -->
+    <link type="text/css" href="styles/customStyles.css" rel="stylesheet">
+
+
+</head>
+    <body>
+
+        <!-- Begin vendor JS files -->
+        <script src="vendors/angularjs/angular.min.js"></script>
+        <script src="vendors/angular-route/angular-route.min.js"></script>
+        <script src="vendors/angular-resource/angular-resource.min.js"></script>
+        <script src="vendors/angular-material/angular-material.min.js"></script>
+        <script src="vendors/angular-animate/angular-animate.min.js"></script>
+        <script src="vendors/angular-aria/angular-aria.min.js"></script>
+        <script src="vendors/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <!-- ng-storage -->
+        <script src="vendors/ngstorage/ngStorage.min.js"></script>
+        <!-- End vendor JS files -->
+
+        <!-- Begin Application JS files -->
+        <script src="js/app.js"></script>
+
+        <!-- Begin components js file -->
+        <script src="js/components/authentication/controllers/authenticationController.js"></script>
+        <script src="js/components/guest/controllers/guestController.js"></script>
+        <!-- End components js file-->
+
+        <!-- Intialize all components js file-->
+        <script src="js/components/components.module.js"></script>
+
+        <div ng-view="" class="backgroundTheme">
+
+        </div>
+
+    </body>
+</html>

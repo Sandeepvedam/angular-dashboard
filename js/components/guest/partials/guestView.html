@@ -1,0 +1,38 @@
+<div>
+
+    <md-toolbar md-scroll-shrink>
+        <div class="md-toolbar-tools">Hospital Inventory Dashboard</div>
+    </md-toolbar>
+
+    <div>
+        <h2 style="margin-top: 80px;color: #3f51b5" align="center" >Available Products</h2>
+    </div>
+
+    <br/>
+
+    <md-content class="md-padding backgroundTheme">
+        <div layout="row" layout-align="center" data-ng-style="{'width': '100%'}">
+            <div class='md-padding' layout="row" layout-align="center" layout-wrap>
+                <md-card class="md-whiteframe-9dp" data-ng-style="{'width': '350px', 'border-radius': '6px'}" data-ng-repeat="product in products" layout-padding>
+                    <md-card-content>
+                        <div>
+                            <h4>{{product.productName}}</h4>
+                            <p>{{product.productPrice}}rs</p>
+                            <md-divider ng-style="{'background': 'rgba(255, 102, 51, 0.7)'}"></md-divider>
+                            <br />
+                            <center>
+                            <img ng-src="{{product.productImage}}" style="width:50% !important;height:50% !important" class="md-card-image" alt="Washed Out">
+                       </center>
+                        </div>
+                    </md-card-content>
+                    <md-card-footer>
+                        <div class="md-actions" layout="row" layout-align="center end">
+                            <md-button ng-click="showProductDescription(product)">View</md-button>
+                        </div>
+                    </md-card-footer>
+                </md-card>
+            </div>
+        </div>
+
+    </md-content>
+</div>

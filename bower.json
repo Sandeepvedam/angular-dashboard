@@ -1,0 +1,33 @@
+{
+  "name": "Hospital-Inventory-Dashboard",
+  "authors": [
+    "Sandeep Vedam <vedamsandeepkumar@gmail.com>"
+  ],
+  "description": "This is hospital inventory dashboard app.",
+  "main": "",
+  "moduleType": [
+    "es6"
+  ],
+  "dependencies" : {
+    "jquery" : "2.1.4",
+    "angularjs": "1.5.0",
+    "angular-route" : "1.4.3",
+    "angular-resource": "1.4.7",
+    "angular-material" : "1.0.8",
+    "angular-bootstrap" : "0.13.3"
+  },
+  "keywords": [
+    "AngularDemoApp",
+    "HospitalInventoryDemoApp"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
